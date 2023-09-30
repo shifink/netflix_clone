@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_netflix_clone/utils/database/database_images.dart';
+import 'package:flutter_netflix_clone/view/more_screen/widget.dart';
 
 class Menuscreen extends StatelessWidget {
   const Menuscreen({super.key});
@@ -20,11 +21,8 @@ class Menuscreen extends StatelessWidget {
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: Databaseimages.databaseimages.length,
-                    itemBuilder: (context, index) => SizedBox(
-                      child: Container(
-                        child:
-                            Image.asset(Databaseimages.databaseimages[index]),
-                      ),
+                    itemBuilder: (context, index) => Container(
+                      child: Image.asset(Databaseimages.databaseimages[index]),
                     ),
                   ),
                 ),
@@ -59,7 +57,10 @@ class Menuscreen extends StatelessWidget {
                             Icons.message,
                             size: 24,
                             color: Colors.white,
-                          ),SizedBox(width: 5,),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
                           Text(
                             "Tell friends about Netflix.",
                             style: TextStyle(
@@ -68,26 +69,58 @@ class Menuscreen extends StatelessWidget {
                                 fontWeight: FontWeight.w700),
                           ),
                         ],
-                      ),SizedBox(height: 10,),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       SizedBox(
                         width: double.infinity,
                         child: Text(
-                            "Lorem ipsum dolor sit amet,consectetur adipiscing elit.Sit quam dui,vivamus bibendum ut. A morbi mi tortor ut felis non accumsan accumsan quis. Massa,",
-                            style: TextStyle(color: Colors.white,fontSize: 10.78),),
-                      ),SizedBox(height: 10,),
+                          "Lorem ipsum dolor sit amet,consectetur adipiscing elit.Sit quam dui,vivamus bibendum ut. A morbi mi tortor ut felis non accumsan accumsan quis. Massa,",
+                          style:
+                              TextStyle(color: Colors.white, fontSize: 10.78),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
-                            "Terms & Conditions",
-                            style: TextStyle(color: Color(0xFFC4C4C4),fontSize: 10.78,decoration: TextDecoration.underline),),
-                            TextField(
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.black
-                              ),
-                            )
+                        "Terms & Conditions",
+                        style: TextStyle(
+                            color: Color(0xFFC4C4C4),
+                            fontSize: 10.78,
+                            decoration: TextDecoration.underline),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            filled: true, fillColor: Colors.black),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      swiget(),
                     ],
                   ),
                 ),
               ),
+              SizedBox(
+                height: 30,
+              ),
+              ListView.builder(
+                itemCount: setting.length,
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    setting[index],
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15),
+                  ),
+                ),
+              )
             ],
           ),
         ),

@@ -35,7 +35,7 @@ class ScrollWidget extends StatelessWidget {
         Container(
           width: double.infinity,
           height: 200,
-          color: Colors.amber,
+          child: Image(image:AssetImage("assets/images/comingsoon_image 2.png")),
         ),
         SizedBox(height: 20,)
       ],

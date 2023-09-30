@@ -167,7 +167,6 @@ class _ComingSoonScreenState extends State<ComingSoonScreen> {
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) => ScrollWidget(),)
-              
             ],
           ),
         ),

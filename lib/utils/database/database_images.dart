@@ -80,3 +80,11 @@ List ComingSoonimage= [
   "assets/images/comingsoon 1.png",
   "assets/images/comingsoon 2.png"
 ];
+
+
+List setting=[
+  "App Settings",
+  "Account",
+  "Help",
+  "Sign Out"
+];
